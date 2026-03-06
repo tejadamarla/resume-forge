@@ -1,0 +1,233 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f3f4f6;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.logo h2 {
+  margin: 0;
+}
+
+.logo span {
+  font-size: 14px;
+  color: gray;
+}
+
+.header-buttons button {
+  margin-left: 10px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.ai-btn {
+  background: #e5e7eb;
+}
+
+.export-btn {
+  background: black;
+  color: white;
+}
+
+/* TABS */
+.tabs {
+  display: flex;
+  gap: 10px;
+  padding: 10px 30px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tabs button {
+  padding: 8px 12px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.tabs .active {
+  background: black;
+  color: white;
+  border-radius: 6px;
+}
+
+/* MAIN LAYOUT */
+.main {
+  display: flex;
+  height: calc(100vh - 120px);
+}
+
+.form-section {
+  width: 50%;
+  padding: 30px;
+  background: white;
+  border-right: 1px solid #e5e7eb;
+  overflow-y: auto;
+}
+
+.preview-section {
+  width: 50%;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+/* FORM */
+.section-title {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 14px;
+  color: #555;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
+
+.two-column {
+  display: flex;
+  gap: 15px;
+}
+
+.two-column > div {
+  flex: 1;
+}
+
+/* PREVIEW */
+.resume-card {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  min-height: 500px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.btn-loading {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.header-buttons button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+select {
+  width: 100%;
+  padding: 8px;
+  margin: 6px 0 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
+label {
+  font-size: 14px;
+  color: #555;
+}
+.skill-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.skill-tag {
+  background: #2563eb;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.skill-tag.soft {
+  background: #10b981;
+}
+.big-textarea {
+  width: 100%;
+  min-height: 110px;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  resize: vertical;
+  font-family: inherit;
+}
+.auth-container{
+  width: 360px;
+  margin: 90px auto;
+  padding: 22px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.auth-container h2{
+  margin-top: 0;
+}
+.auth-container input{
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+.auth-container button{
+  width: 100%;
+  padding: 10px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.auth-wrapper{
+  text-align:center;
+  margin-top:80px;
+}
+
+.brand-title{
+  font-size:55px;
+  font-weight:800;
+  letter-spacing:2px;
+  margin-bottom:30px;
+}
+
+.auth-container{
+  width:360px;
+  margin:auto;
+  padding:25px;
+  background:white;
+  border-radius:10px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+.auth-container input{
+  width:100%;
+  padding:10px;
+  margin:10px 0;
+  border:1px solid #d1d5db;
+  border-radius:8px;
+}
+
+.auth-container button{
+  width:100%;
+  padding:10px;
+  background:black;
+  color:white;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
