@@ -38,42 +38,38 @@ const Login = () => {
     }
   };
 
- return (
-  <div className="auth-wrapper">
+  return (
+    <div className="auth-wrapper">
+      <h1 className="brand-title">ResumeForge</h1>
 
-    <h1 className="brand-title">ResumeForge</h1>
+      <div className="auth-container">
+        <h2>Login</h2>
 
-    <div className="auth-container">
-      <h2>Login</h2>
+        <form onSubmit={handleLogin}>
+          <input
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
 
-      <form onSubmit={handleLogin}>
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
 
-        <input
-          placeholder="Email"
-          value={email}
-          onChange={(e)=>setEmail(e.target.value)}
-        />
+          <button type="submit" disabled={loading}>
+            {loading ? "Logging in..." : "Login"}
+          </button>
+        </form>
 
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e)=>setPassword(e.target.value)}
-        />
-
-        <button type="submit">
-          Login
-        </button>
-
-      </form>
-
-      <p>
-        Don't have an account? <Link to="/register">Register</Link>
-      </p>
-
+        <p style={{ marginTop: 10 }}>
+          New user? <Link to="/register">Create account</Link>
+        </p>
+      </div>
     </div>
-
-  </div>
-);}
+  );
+};
 
 export default Login;

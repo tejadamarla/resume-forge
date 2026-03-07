@@ -33,11 +33,14 @@ for (let y = currentYear; y >= 1990; y--) years.push(y);return (
   <option value="Bangalore">Bangalore</option>
   <option value="Chennai">Chennai</option>
   <option value="Mumbai">Mumbai</option>
+  <option value="other">Other</option>
 </select> 
-{showOtherLocation && (
+
+{formData.location === "other" && (
   <input
+
     name="customLocation"
-    placeholder="Enter your location"
+    placeholder="Enter your Location"
     onChange={handleChange}
   />
 )}

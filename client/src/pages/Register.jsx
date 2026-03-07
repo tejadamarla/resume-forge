@@ -14,7 +14,7 @@ const Register = () => {
     setLoading(true);
 
     try {
-      const res = await fetch("https://resume-forge-backend.onrender.com/api/auth/register", {
+     const res = await fetch("https://resume-forge-backend.onrender.com/api/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, password }),
@@ -28,7 +28,7 @@ const Register = () => {
         return;
       }
 
-      alert("Registered ✅ Now login");
+      alert("Registered successfully ✅");
       navigate("/");
     } catch (err) {
       alert("Server not reachable");
@@ -38,37 +38,41 @@ const Register = () => {
   };
 
   return (
-    <div className="auth-container">
-      <h2>Create Account</h2>
+    <div className="auth-wrapper">
+      <h1 className="brand-title">ResumeForge</h1>
 
-      <form onSubmit={handleRegister}>
-        <input
-          placeholder="Full Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
+      <div className="auth-container">
+        <h2>Create Account</h2>
 
-        <input
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+        <form onSubmit={handleRegister}>
+          <input
+            placeholder="Full Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
 
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+          <input
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
 
-        <button type="submit" disabled={loading}>
-          {loading ? "Creating..." : "Register"}
-        </button>
-      </form>
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
 
-      <p style={{ marginTop: 10 }}>
-        Already have account? <Link to="/">Login</Link>
-      </p>
+          <button type="submit" disabled={loading}>
+            {loading ? "Creating..." : "Register"}
+          </button>
+        </form>
+
+        <p style={{ marginTop: 10 }}>
+          Already have account? <Link to="/">Login</Link>
+        </p>
+      </div>
     </div>
   );
 };
